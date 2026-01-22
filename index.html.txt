@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Tool Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>🧰 My Tool Website</h1>
+
+  <div class="menu">
+    <button onclick="showSection('tools')">🛠️ Tools</button>
+    <button onclick="showSection('games')">🎮 Games</button>
+    <button onclick="showSection('tasks')">✅ Mini Tasks</button>
+  </div>
+
+  <!-- TOOLS -->
+  <div id="tools" class="section">
+    <h2>🛠️ Tools</h2>
+
+    <h3>Word Counter</h3>
+    <textarea id="textInput" placeholder="Yahan text likho"></textarea>
+    <button onclick="countWords()">Count Words</button>
+    <p id="wordResult"></p>
+
+    <h3>Case Converter</h3>
+    <button onclick="toUpper()">UPPERCASE</button>
+    <button onclick="toLower()">lowercase</button>
+
+    <h3>Password Generator</h3>
+    <button onclick="generatePassword()">Generate Password</button>
+    <p id="password"></p>
+  </div>
+
+  <!-- GAMES -->
+  <div id="games" class="section">
+    <h2>🎮 Guess the Number</h2>
+    <input type="number" id="guessInput" placeholder="1 se 10">
+    <button onclick="guessNumber()">Guess</button>
+    <p id="gameResult"></p>
+  </div>
+
+  <!-- TASKS -->
+  <div id="tasks" class="section">
+    <h2>✅ Todo List</h2>
+    <input type="text" id="todoInput" placeholder="Task likho">
+    <button onclick="addTodo()">Add</button>
+    <ul id="todoList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
